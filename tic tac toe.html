@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIC TAC TOE GAME</title>
+	<style>
+
+	body
+	{
+		background-color: black;
+	}
+
+	.button 
+	{
+		  background-color: yellow;
+		  border: none;
+		  color: black;
+		  padding: 35px 35px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 35px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+	}
+
+	.look
+	{
+		width: 5%;
+		border: none;
+	  	background-color: #4CAF50;
+	  	color: white;
+	  	padding: 10px 30px;
+	  	font-size: 20px;
+	  	cursor: pointer;
+	  	text-align: center;
+	}
+</style>
+</head>
+<body>
+<h1> <font color="white"> WELCOME TO THE TIC TAC TOE GAME</h1> </font>
+
+<script type="text/javascript">
+	
+	var a;
+	var b;
+	var c;
+	var d;
+	var e;
+	var f;
+	var g;
+	var h;
+	var i;
+
+	var count=0,count1=0,count2=0;
+	
+function myFunction1()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(a == "  ")
+	{
+		document.getElementById("demo1").value="x";
+
+		read2();
+
+		if((g=="o"&&e=="o"&&c!="o"&&c!="x")||(b=="o"&&e=="o"&&h!="o"&&h!="x")||(c=="o"&&e=="o"&&g!="o"&&g!="x")||(h=="o"&&e=="o"&&b!="o"&&b!="x")||(f=="o"&&e=="o"&&d!="o"&&d!="x")||(d=="o"&&e=="o"&&f!="o"&&f!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+
+                else
+                {
+                    if(e=="o")
+                    {
+                        if(a=="x" && c=="x")
+                        {
+                            if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+
+                        }
+                        else if(a=="x" && b=="x")
+                        {
+                            if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+
+                        else if(a=="x" && d=="x")
+                        {
+                            if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+
+                        else if(a=="x" && f=="x")
+                        {
+                            if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(a=="x" && g=="x")
+                        {
+                            if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(a=="x" && h=="x")
+                        {
+                            if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(a=="x" && i=="x")
+                        {
+                            if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                        }
+                        read1();
+                    }
+
+                    else
+                    {
+                        document.getElementById("demo5").value="o";
+                    }
+                }
+            }
+
+	}
+}
+
+function myFunction2()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(b == "  ")
+	{
+		document.getElementById("demo2").value="x";
+
+		read2();
+
+		if((g=="o"&&e=="o"&&c!="o"&&c!="x")||(a=="o"&&e=="o"&&i!="o"&&i!="x")||(c=="o"&&e=="o"&&g!="o"&&g!="x")||(i=="o"&&e=="o"&&a!="o"&&a!="x")||(f=="o"&&e=="o"&&d!="o"&&d!="x")||(d=="o"&&e=="o"&&f!="o"&&f!="x")||(a=="o"&&b=="o"&&g!="o"&&g!="x")||(d=="o"&&g=="o"&&a!="o"&&a!="x")||(g=="o"&&h=="o"&&i!="o"&&i!="x")||(h=="o"&&i=="o"&&g!="o"&&g!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+                else
+                {
+                    if(e=="o")
+                    {
+                        if(b=="x" && c=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(b=="x" && a=="x")
+                        {
+                            if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(b=="x" && d=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(b=="x" && f=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(b=="x" && g=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(b=="x" && h=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(b=="x" && i=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                        }
+
+                    }
+                    else if(e=="x")
+                    {
+                        {
+                            if((a=="o"&&d=="o"&&g!="o"&&g!="x")||(a=="o"&&g=="o"&&d!="o"&&d!="x")||(g=="o"&&d=="o"&&a!="o"&&a!="x")||(b=="o"&&c=="o"&&a!="o"&&a!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                                read();
+                            else
+                            {
+                                if(h!="o"&&h!="x")
+                                    document.getElementById("demo8").value="o";
+                                else if(b!="o"&&b!="x")
+                                    document.getElementById("demo2").value="o";
+                                else if(a!="o"&&a!="x")
+                                    document.getElementById("demo1").value="o";
+                                else if(d!="o"&&d!="x")
+                                    document.getElementById("demo4").value="o";
+                                else if(f!="o"&&f!="x")
+                                    document.getElementById("demo6").value="o";
+                                else if(g!="o"&&g!="x")
+                                    document.getElementById("demo7").value="o";
+                                else if(i!="o"&&i!="x")
+                                    document.getElementById("demo9").value="o";
+                                else if(c!="o"&&c!="x")
+                                    document.getElementById("demo3").value="o";
+                            }
+                        }
+
+                    }
+                    else
+                        document.getElementById("demo5").value="o";
+                }
+            }
+            read1();
+	}
+}
+
+function myFunction3()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(c == "  ")
+	{
+		document.getElementById("demo3").value="x";
+
+		read2();
+
+		if((a=="o"&&e=="o"&&i!="o"&&i!="x")||(i=="o"&&e=="o"&&a!="o"&&a!="x")||(b=="o"&&e=="o"&&h!="o"&&h!="x")||(h=="o"&&e=="o"&&b!="o"&&b!="x")||(f=="o"&&e=="o"&&d!="o"&&d!="x")||(d=="o"&&e=="o"&&f!="o"&&f!="x")||(g=="o"&&h=="o"&&i!="o"&&i!="x")||(h=="o"&&i=="o"&&g!="o"&&g!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+                else
+                {
+                    if(e=="o")
+                    {
+                        if(c=="x" && a=="x")
+                        {
+                            if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(d!="o" && d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(c=="x" && b=="x")
+                        {
+                            if(a!="o" && a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(f!="o" && f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(c=="x" && d=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(c=="x" && f=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+
+                        }
+                        else if(c=="x" && g=="x")
+                        {
+                            if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+
+                        }
+                        else if(c=="x" && h=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(c=="x" && i=="x")
+                        {
+                            if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+
+                        }
+
+                    }
+                    else if(e=="x")
+                    {
+                        {
+                            if((a=="o"&&d=="o"&&g!="o"&&g!="x")||(a=="o"&&g=="o"&&d!="o"&&d!="x")||(g=="o"&&d=="o"&&a!="o"&&a!="x")||(b=="o"&&c=="o"&&a!="o"&&a!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                                read();
+                            else
+                            {
+                                if(g!="o"&&g!="x")
+                                    document.getElementById("demo7").value="o";
+                                else if(b!="o"&&b!="x")
+                                    document.getElementById("demo2").value="o";
+                                else if(a!="o"&&a!="x")
+                                    document.getElementById("demo1").value="o";
+                                else if(d!="o"&&d!="x")
+                                    document.getElementById("demo4").value="o";
+                                else if(f!="o"&&f!="x")
+                                    document.getElementById("demo6").value="o";
+                                else if(c!="o"&&c!="x")
+                                    document.getElementById("demo3").value="o";
+                                else if(h!="o"&&h!="x")
+                                    document.getElementById("demo8").value="o";
+                                else if(i!="o"&&i!="x")
+                                    document.getElementById("demo8").value="o";
+                            }
+                        }
+
+                    }
+                    else
+                        document.getElementById("demo5").value="o";
+                }
+            }
+            read1();
+	}
+}
+
+function myFunction4()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(d == "  ")
+	{
+		document.getElementById("demo4").value="x";
+
+		read2();
+
+		if((g=="o"&&e=="o"&&c!="o"&&c!="x")||(b=="o"&&e=="o"&&h!="o"&&h!="x")||(c=="o"&&e=="o"&&g!="o"&&g!="x")||(h=="o"&&e=="o"&&b!="o"&&b!="x")||(a=="o"&&e=="o"&&i!="o"&&i!="x")||(i=="o"&&e=="o"&&a!="o"&&a!="x")||(g=="o"&&h=="o"&&i!="o"&&i!="x")||(h=="o"&&i=="o"&&g!="o"&&g!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+                else
+                {
+                    //	y=Integer.parseInt(b7.getText());
+                    if(e=="o")
+                    {
+                        if(d=="x" && a=="x")
+                        {
+                            if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                        }
+
+                        else if(d=="x" && b=="x")
+                        {
+                            if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                        }
+                        else if(d=="x" && c=="x")
+                        {
+                            if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                        }
+                        else if(d=="x" && f=="x")
+                        {
+                            if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                        }
+                        else if(d=="x" && g=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                        }
+
+                        else if(d=="x" && h=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                        }
+                        else if(d=="x" && i=="x")
+                        {
+                            if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                        }
+
+                    }
+                    else if(e=="x")
+                    {
+                        {
+                            if((a=="o"&&d=="o"&&g!="o"&&g!="x")||(a=="o"&&g=="o"&&d!="o"&&d!="x")||(g=="o"&&d=="o"&&a!="o"&&a!="x")||(b=="o"&&c=="o"&&a!="o"&&a!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                                read();
+                            else
+                            {
+                                if(f!="o"&&f!="x")
+                                    document.getElementById("demo6").value="o";
+                                else if(b!="o"&&b!="x")
+                                    document.getElementById("demo2").value="o";
+                                else if(a!="o"&&a!="x")
+                                    document.getElementById("demo1").value="o";
+                                else if(d!="o"&&d!="x")
+                                    document.getElementById("demo4").value="o";
+                                else if(c!="o"&&c!="x")
+                                    document.getElementById("demo3").value="o";
+                                else if(g!="o"&&g!="x")
+                                    document.getElementById("demo7").value="o";
+                                else if(h!="o"&&h!="x")
+                                    document.getElementById("demo8").value="o";
+                                else if(i!="o"&&i!="x")
+                                    document.getElementById("demo8").value="o";
+                            }
+                        }
+
+                    }
+
+                    else
+                        document.getElementById("demo5").value="o";
+                }
+            }
+            read1();
+	}
+}
+
+function myFunction5()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(e == "  ")
+	{
+		document.getElementById("demo5").value="x";
+		document.getElementById("demo1").value="o";
+	}
+}
+
+function myFunction6()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(f == "  ")
+	{
+		document.getElementById("demo6").value="x";
+
+		read2();
+
+		if((g=="o"&&e=="o"&&c!="o"&&c!="x")||(b=="o"&&e=="o"&&h!="o"&&h!="x")||(c=="o"&&e=="o"&&g!="o"&&g!="x")||(h=="o"&&e=="o"&&b!="o"&&b!="x")||(a=="o"&&e=="o"&&i!="o"&&i!="x")||(i=="o"&&e=="o"&&a!="o"&&a!="x")||(g=="o"&&h=="o"&&i!="o"&&i!="x")||(h=="o"&&i=="o"&&g!="o"&&g!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+                else
+                {
+                    if(e=="o")
+                    {
+                    	if(f=="x" && c=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                        }
+
+                        else if(f=="x" && i=="x")
+                        {
+                            if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                        }
+
+                        else if(f=="x" && b=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                        }
+                        else if(f=="x" && a=="x")
+                        {
+                            if(h!="o"&& h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                        }
+                        else if(f=="x" && d=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                        }
+                        else if(f=="x" && g=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+
+                        }
+                        else if(f=="x" && h=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                        }                        
+                    }
+                    else if(e=="x")
+                    {
+
+                        if((a=="o"&&d=="o"&&g!="o"&&g!="x")||(a=="o"&&g=="o"&&d!="o"&&d!="x")||(g=="o"&&d=="o"&&a!="o"&&a!="x")||(b=="o"&&c=="o"&&a!="o"&&a!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                            read();
+                        else
+                        {
+                            if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo8").value="o";
+                        }
+                    }
+
+                    else
+                        document.getElementById("demo5").value="o";
+                }
+            }    read1();
+	}
+}
+
+function myFunction7()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(g == "  ")
+	{
+		document.getElementById("demo7").value="x";
+
+		read2();
+
+		if((a=="o"&&e=="o"&&i!="o"&&i!="x")||(b=="o"&&e=="o"&&h!="o"&&h!="x")||(i=="o"&&e=="o"&&a!="o"&&a!="x")||(h=="o"&&e=="o"&&b!="o"&&b!="x")||(f=="o"&&e=="o"&&d!="o"&&d!="x")||(d=="o"&&e=="o"&&f!="o"&&f!="x")||(c=="o"&&f=="o"&&i!="o"&&i!="x")||(f=="o"&&i=="o"&&c!="o"&&c!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+                else
+                {
+                    //		y=Integer.parseInt(b4.getText());
+
+                    if(e=="o")
+                    {
+
+                        if(g=="x" && a=="x")
+                        {
+                            if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(g=="x" && b=="x")
+                        {
+                            if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(g=="x" && c=="x")
+                        {
+                            if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(g=="x" && d=="x")
+                        {
+                            if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(g=="x" && f=="x")
+                        {
+                            if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+
+                        }
+                        else if(g=="x" && h=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(g=="x" && i=="x")
+                        {
+                            if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+
+                    }
+                    else if(e=="x")
+                    {
+                        {
+                            if((a=="o"&&d=="o"&&g!="o"&&g!="x")||(a=="o"&&g=="o"&&d!="o"&&d!="x")||(g=="o"&&d=="o"&&a!="o"&&a!="x")||(b=="o"&&c=="o"&&a!="o"&&a!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                                read();
+                            else
+                            {
+                                if(c!="o"&&c!="x")
+                                    document.getElementById("demo3").value="o";
+                                else if(b!="o"&&b!="x")
+                                    document.getElementById("demo2").value="o";
+                                else if(a!="o"&&a!="x")
+                                    document.getElementById("demo1").value="o";
+                                else if(d!="o"&&d!="x")
+                                    document.getElementById("demo4").value="o";
+                                else if(f!="o"&&f!="x")
+                                    document.getElementById("demo6").value="o";
+                                else if(g!="o"&&g!="x")
+                                    document.getElementById("demo7").value="o";
+                                else if(h!="o"&&h!="x")
+                                    document.getElementById("demo8").value="o";
+                                else if(i!="o"&&i!="x")
+                                    document.getElementById("demo8").value="o";
+                            }
+                        }
+
+                    }
+                    else
+                        document.getElementById("demo5").value="o";
+                }
+            }
+            read1();
+
+	}
+}
+
+function myFunction8()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(h == "  ")
+	{
+		document.getElementById("demo8").value="x";
+
+		read2();
+
+		if((g=="o"&&e=="o"&&c!="o"&&c!="x")||(a=="o"&&e=="o"&&i!="o"&&i!="x")||(c=="o"&&e=="o"&&g!="o"&&g!="x")||(i=="o"&&e=="o"&&a!="o"&&a!="x")||(f=="o"&&e=="o"&&d!="o"&&d!="x")||(d=="o"&&e=="o"&&f!="o"&&f!="x")||(c=="o"&&f=="o"&&i!="o"&&i!="x")||(f=="o"&&i=="o"&&c!="o"&&c!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+                else
+                {
+                    if(e=="o")
+                    {
+                        if(h=="x" && a=="x")
+                        {
+                            if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(h=="x" && b=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(h=="x" && c=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(h=="x" && d=="x")
+                        {
+                            if(i!="o"&&i!="x")
+
+                                document.getElementById("demo9").value="o";
+
+
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(h=="x" && f=="x")
+                        {
+                            if(i!="o"&&i!="x")
+
+                                document.getElementById("demo9").value="o";
+
+
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+
+                        }
+                        else if(h=="x" && g=="x")
+                        {
+                            if(i!="o"&&i!="x")
+                                document.getElementById("demo9").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+
+                        }
+                        else if(h=="x" && i=="x")
+                        {
+                            if(g!="o"&&g!="x")
+
+                                document.getElementById("demo7").value="o";
+
+
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                        }
+
+                    }
+                    else if(e=="x")
+                    {
+                        if(h=="x")
+                        {
+                            if((a=="o"&&d=="o"&&g!="o"&&g!="x")||(a=="o"&&g=="o"&&d!="o"&&d!="x")||(g=="o"&&d=="o"&&a!="o"&&a!="x")||(b=="o"&&c=="o"&&a!="o"&&a!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                                read();
+                            else
+                            {
+                                if(b!="o"&&b!="x")
+                                    document.getElementById("demo2").value="o";
+                                else if(c!="o"&&c!="x")
+                                    document.getElementById("demo3").value="o";
+                                else if(a!="o"&&a!="x")
+                                    document.getElementById("demo1").value="o";
+                                else if(d!="o"&&d!="x")
+                                    document.getElementById("demo4").value="o";
+                                else if(f!="o"&&f!="x")
+                                    document.getElementById("demo6").value="o";
+                                else if(g!="o"&&g!="x")
+                                    document.getElementById("demo7").value="o";
+                                else if(h!="o"&&h!="x")
+                                    document.getElementById("demo8").value="o";
+                                else if(i!="o"&&i!="x")
+                                    document.getElementById("demo8").value="o";
+                            }
+                        }
+                    }
+                    else
+                        document.getElementById("demo5").value="o";
+                }
+            }
+            read1();
+	}
+}
+
+function myFunction9()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(i == "  ")
+	{
+		document.getElementById("demo9").value="x";
+
+		read2();
+
+		if((g=="o"&&e=="o"&&c!="o"&&c!="x")||(b=="o"&&e=="o"&&h!="o"&&h!="x")||(c=="o"&&e=="o"&&g!="o"&&g!="x")||(h=="o"&&e=="o"&&b!="o"&&b!="x")||(f=="o"&&e=="o"&&d!="o"&&d!="x")||(d=="o"&&e=="o"&&f!="o"&&f!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                read();
+            else
+            {
+                if((a=="x" || a=="o")&&(b=="x" || b=="o")&&(c=="x" || c=="o")&&(d=="x" || d=="o")&&(e=="x" || e=="o")&&(f=="x" || f=="o")&&(g=="x" || g=="o")&&(h=="x" || h=="o")&&(i=="x" || i=="o"))
+                {
+                    tie();
+                }
+                else
+                {
+                    if(e=="o")
+                    {
+                    	if(i=="x" && f=="x")
+                        {
+                            if(c!="o"&&c!="x")
+
+                                document.getElementById("demo3").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+
+                        }
+
+                        else if(i=="x" && h=="x")
+                        {
+                            if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+
+                        }
+           
+                        else if(i=="x" && b=="x")
+                        {
+                            if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+
+                        }
+                        else if(i=="x" && c=="x")
+                        {
+                            if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+
+                        }
+                        else if(i=="x" && d=="x")
+                        {
+                            if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+
+                        }
+                        else if(i=="x" && a=="x")
+                        {
+                            if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(g!="o"&&g!="x")
+                                document.getElementById("demo7").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                        }
+                        else if(i=="x" && g=="x")
+                        {
+                            if(h!="o"&&h!="x")
+                                document.getElementById("demo8").value="o";
+                            else if(f!="o"&&f!="x")
+                                document.getElementById("demo6").value="o";
+                            else if(c!="o"&&c!="x")
+                                document.getElementById("demo3").value="o";
+                            else if(d!="o"&&d!="x")
+                                document.getElementById("demo4").value="o";
+                            else if(a!="o"&&a!="x")
+                                document.getElementById("demo1").value="o";
+                            else if(e!="o"&&e!="x")
+                                document.getElementById("demo5").value="o";
+                            else if(b!="o"&&b!="x")
+                                document.getElementById("demo2").value="o";
+
+                        }
+                        
+                    }
+                    else if(e=="x")
+                    {
+                        if(i=="x")
+                        {
+                            if((a=="o"&&d=="o"&&g!="o"&&g!="x")||(a=="o"&&g=="o"&&d!="o"&&d!="x")||(g=="o"&&d=="o"&&a!="o"&&a!="x")||(b=="o"&&c=="o"&&a!="o"&&a!="x")||(a=="o"&&b=="o"&&c!="o"&&c!="x")||(a=="o"&&c=="o"&&b!="o"&&b!="x"))
+                                read();
+                            else
+                            {
+                                if(c!="o"&&c!="x")
+                                    document.getElementById("demo3").value="o";
+                                else if(b!="o"&&b!="x")
+                                    document.getElementById("demo2").value="o";
+                                else if(a!="o"&&a!="x")
+                                    document.getElementById("demo1").value="o";
+                                else if(d!="o"&&d!="x")
+                                    document.getElementById("demo4").value="o";
+                                else if(f!="o"&&f!="x")
+                                    document.getElementById("demo6").value="o";
+                                else if(g!="o"&&g!="x")
+                                    document.getElementById("demo7").value="o";
+                                else if(h!="o"&&h!="x")
+                                    document.getElementById("demo8").value="o";
+                                else if(i!="o"&&i!="x")
+                                    document.getElementById("demo8").value="o";
+                            }
+                        }
+
+                    }
+
+                    else
+                        document.getElementById("demo5").value="o";
+                }
+            }
+            read1();
+
+	}
+}
+
+function read()
+{
+
+	a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+	if(a=="o" && b=="o"&&c!="o"&&c!="x")
+            document.getElementById("demo3").value="o";
+        else if(a=="o" && c=="o"&&b!="o"&&b!="x")
+            document.getElementById("demo2").value="o";
+        else if(b=="o" && c=="o"&&a!="o"&&a!="x")
+            document.getElementById("demo1").value="o";
+        else if(d=="o" && e=="o"&&f!="o"&&f!="x")
+            document.getElementById("demo6").value="o";
+        else if(d=="o" && f=="o"&&e!="o"&&e!="x")
+            document.getElementById("demo5").value="o";
+        else if(e=="o" && f=="o"&&d!="o"&&d!="x")
+            document.getElementById("demo4").value="o";
+        else if(g=="o" && h=="o"&&i!="o"&&i!="x")
+            document.getElementById("demo9").value="o";
+        else if(g=="o" && i=="o"&&h!="o"&&h!="x")
+            document.getElementById("demo8").value="o";
+        else if(h=="o" && i=="o"&&g!="o"&&g!="x")
+            document.getElementById("demo7").value="o";
+        else if(a=="o" && d=="o"&&g!="o"&&g!="x")
+            document.getElementById("demo7").value="o";
+        else if(a=="o" && g=="o"&&d!="o"&&d!="x")
+            document.getElementById("demo4").value="o";
+        else if(d=="o" && g=="o"&&a!="o"&&a!="x")
+            document.getElementById("demo1").value="o";
+        else if(b=="o" && e=="o"&&h!="o"&&h!="x")
+            document.getElementById("demo8").value="o";
+        else if(b=="o" && h=="o"&&e!="o"&&e!="x")
+            document.getElementById("demo5").value="o";
+        else if(e=="o" && h=="o"&&b!="o"&&b!="x")
+            document.getElementById("demo2").value="o";
+        else if(c=="o" && f=="o"&&i!="o"&&i!="x")
+            document.getElementById("demo9").value="o";
+        else if(c=="o" && i=="o"&&f!="o"&&f!="x")
+            document.getElementById("demo6").value="o";
+        else if(f=="o" && i=="o"&&c!="o"&&c!="x")
+            document.getElementById("demo3").value="o";
+        else if(a=="o" && e=="o"&&i!="o"&&i!="x")
+            document.getElementById("demo9").value="o";
+        else if(a=="o" && i=="o"&&e!="o"&&e!="x")
+            document.getElementById("demo5").value="o";
+        else if(e=="o" && i=="o"&&a!="o"&&a!="x")
+            document.getElementById("demo1").value="o";
+        else if(c=="o" && e=="o"&&g!="o"&&g!="x")
+            document.getElementById("demo7").value="o";
+        else if(c=="o" && g=="o"&&e!="o"&&e!="x")
+            document.getElementById("demo5").value="o";
+        else if(e=="o" && g=="o"&&c!="o"&&c!="x")
+        {
+            document.getElementById("demo3").value="o";
+        }
+        read1();
+}
+
+function read1()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+
+	if((a=="o"&& b=="o"&&c=="o")||(d=="o"&&e=="o"&&f=="o")||(g=="o"&&h=="o"&&i=="o")||(a=="o"&&d=="o"&&g=="o")||(b=="o"&&e=="o"&&h=="o")||(c=="o"&&f=="o"&&i=="o")||(a=="o"&&e=="o"&&i=="o")||(c=="o"&&e=="o"&&g=="o"))
+        {
+            person2();
+        }
+
+}
+
+function read2()
+{
+	 a = document.getElementById("demo1").value;
+	 b = document.getElementById("demo2").value;
+     c = document.getElementById("demo3").value;	  
+	 d = document.getElementById("demo4").value;
+	 e = document.getElementById("demo5").value;
+	 f = document.getElementById("demo6").value;
+     g = document.getElementById("demo7").value;	  
+	 h = document.getElementById("demo8").value;
+	 i = document.getElementById("demo9").value;
+
+
+	if((a=="x"&& b=="x"&&c=="x")||(d=="x"&&e=="x"&&f=="x")||(g=="x"&&h=="x"&&i=="x")||(a=="x"&&d=="x"&&g=="x")||(b=="x"&&e=="x"&&h=="x")||(c=="x"&&f=="x"&&i=="x")||(a=="x"&&e=="x"&&i=="x")||(c=="x"&&e=="x"&&g=="x"))
+        {
+            person1();
+        }
+}
+
+function tie()
+{
+	alert(' OH! OH! GAME IS TIE ');	
+
+	document.getElementById("demo1").value="  ";
+	document.getElementById("demo2").value="  ";
+    document.getElementById("demo3").value="  ";	  
+	document.getElementById("demo4").value="  ";
+	document.getElementById("demo5").value="  ";
+	document.getElementById("demo6").value="  ";
+    document.getElementById("demo7").value="  ";	  
+	document.getElementById("demo8").value="  ";
+	document.getElementById("demo9").value="  ";
+
+	count2++;
+	document.getElementById("tie").value=count2;
+}
+
+function person1()
+{
+	alert(' PERSON 1 WINS THE GAME ');	
+
+	document.getElementById("demo1").value="  ";
+	document.getElementById("demo2").value="  ";
+    document.getElementById("demo3").value="  ";	  
+	document.getElementById("demo4").value="  ";
+	document.getElementById("demo5").value="  ";
+	document.getElementById("demo6").value="  ";
+    document.getElementById("demo7").value="  ";	  
+	document.getElementById("demo8").value="  ";
+	document.getElementById("demo9").value="  ";
+
+	count++;
+	document.getElementById("person1").value=count;
+}
+
+function person2()
+{
+	alert(' COMPUTER WINS THE GAME ');	
+
+	document.getElementById("demo1").value="  ";
+	document.getElementById("demo2").value="  ";
+    document.getElementById("demo3").value="  ";	  
+	document.getElementById("demo4").value="  ";
+	document.getElementById("demo5").value="  ";
+	document.getElementById("demo6").value="  ";
+    document.getElementById("demo7").value="  ";	  
+	document.getElementById("demo8").value="  ";
+	document.getElementById("demo9").value="  ";
+
+	count1++;
+	document.getElementById("person2").value=count1;
+}
+
+
+</script>
+
+<FORM METHOD='POST' ACTION="">
+
+<CENTER>
+<TABLE ROWS=3 COLUMNS=3 >
+<TR>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="1" onclick="myFunction1()" id="demo1"> </TD>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="2" onclick="myFunction2()" id="demo2"> </TD>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="3" onclick="myFunction3()" id="demo3"> </TD>
+</TR>
+
+<TR>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="4" onclick="myFunction4()" id="demo4"> </TD>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="5" onclick="myFunction5()" id="demo5"> </TD>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="6" onclick="myFunction6()" id="demo6"> </TD>
+</TR>
+
+<TR>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="7" onclick="myFunction7()" id="demo7"> </TD>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="8" onclick="myFunction8()" id="demo8"> </TD>
+    <TD> <INPUT TYPE = "BUTTON" VALUE="  " class="button" name="9" onclick="myFunction9()" id="demo9"> </TD>
+</TR>
+
+</TABLE>
+</CENTER>
+
+<h3> SCORES </h3>
+<table rows=3 columns=2>
+	<TR>
+		<TD> <font color="white"> PERSON </font>  </TD>
+		<TD> <input type="button" name="person1" value="0" id="person1" class="look"> </TD>
+	</TR>
+
+	<TR>
+		<TD> <font color="white"> COMPUTER </font> </TD>
+		<TD> <input type="button" name="person2" value="0" id="person2" class="look"> </TD>
+	</TR>
+
+	<TR>
+		<TD> <font color="white"> GAME TIE </font> </TD>
+		<TD> <input type="button" name="tie" value="0" id="tie" class="look"> </TD>
+	</TR>
+</table>
+
+</FORM>
+
+</body>
+</html>

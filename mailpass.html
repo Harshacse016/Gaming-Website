@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<center >
+
+	<div>  
+	<dialog id="myFirstDialog" style="width:50%;background-color:#F4FFEF;border:1px dotted black;">  
+	<p><q>PLEASE ENTER THE OTP FROM GMAIL  <input type="text" name="pass"> 
+	</q></p>  
+	<button id="hide">SUBMIT</button>  
+	</dialog>  
+	<!-- <button id="show">Show Dialog</button>  --> 
+	</div>  
+	 
+	<script type="text/JavaScript">  
+	(function() {    
+	    var dialog = document.getElementById('myFirstDialog');    
+	    //document.getElementById('').onclick = function() {    
+	        dialog.show();    
+	    //};    
+	    document.getElementById('hide').onclick = function() 
+	    {    
+	        dialog.close();    
+	    };    
+	})();   
+	</script>  
+
+	</center>
+
+</body>
+</html>
